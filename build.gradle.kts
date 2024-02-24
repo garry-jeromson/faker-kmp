@@ -6,8 +6,8 @@ buildscript {
 }
 plugins {
     //trick: for the same plugin versions in all sub-modules
-    id("com.android.library").version("7.4.2").apply(false)
-    kotlin("multiplatform").version("1.9.0").apply(false)
-    id("com.vanniktech.maven.publish") version "0.25.2"
-    id("org.jetbrains.kotlin.jvm") version "1.8.0" apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.multiplatform) apply false
+    alias(libs.plugins.maven.publish) apply false
+    alias(libs.plugins.kotlin.jvm) apply false
 }
